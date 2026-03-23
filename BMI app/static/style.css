@@ -1,51 +1,55 @@
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    font-family: Arial;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
 .container {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 350px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease;
 }
 
-h1 {
-    margin-bottom: 20px;
-}
-
-input {
+input, button {
     width: 90%;
     padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    margin: 10px;
 }
 
 button {
     background: #4facfe;
     color: white;
     border: none;
-    padding: 10px;
-    width: 95%;
-    border-radius: 5px;
     cursor: pointer;
-}
-
-button:hover {
-    background: #00c6ff;
 }
 
 .result {
     margin-top: 20px;
-    padding: 10px;
-    background: #f1f1f1;
-    border-radius: 5px;
+    animation: slideUp 0.7s ease;
+}
+
+.diet {
+    color: #333;
+    font-size: 14px;
+}
+
+.chart {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+@keyframes slideUp {
+    from {transform:translateY(20px); opacity:0;}
+    to {transform:translateY(0); opacity:1;}
 }
